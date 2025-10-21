@@ -223,17 +223,16 @@ main {
         margin-top: 30px;
     }
 
-    .profile-photo img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        /* Removido o anel de box-shadow e mantida apenas a borda de destaque: */
-        border: 5px solid var(--accent-color);
-        box-shadow: 0 4px 15px var(--shadow-light);
-        /* Sombra suave, sem o anel duplo */
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+    
+    border-radius: 50%;    
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 4px 15px var(--shadow-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
     .profile-photo figcaption {
         margin-top: 15px;
@@ -592,5 +591,6 @@ main {
         box-shadow: 0 4px 10px rgba(255, 64, 129, 0.8);
         /* Sombra mais forte no escuro */
     }
+
 
 
