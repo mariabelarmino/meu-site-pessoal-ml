@@ -223,7 +223,7 @@ main {
         margin-top: 30px;
     }
 
-    .profile-photo {
+    .profile-photo img {
         width: 200px;
         height: 200px;
         object-fit: cover;
@@ -592,4 +592,3 @@ main {
         box-shadow: 0 4px 10px rgba(255, 64, 129, 0.8);
         /* Sombra mais forte no escuro */
     }
-
