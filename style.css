@@ -1,0 +1,538 @@
+/* Definição de Variáveis de Cores e Fontes (TEMA ROSA) */
+:root {
+    --primary-color: #E91E63; /* Magenta Forte (Cabeçalho, Borda de Card) */
+    --secondary-color: #F48FB1; /* Rosa Suave (Hover, Fundo de Tags) */
+    --accent-color: #FF4081; /* Rosa Vibrante (Destaque, Botões, Borda da Foto) */
+    --background-light: #F0F4F8; /* Fundo claro e suave */
+    --text-dark: #2C3E50; /* Cinza azulado escuro para texto */
+    --text-light: #ECF0F1; /* Cinza claro para texto em fundo escuro */
+    --card-background: #FFFFFF;
+    --border-color: #DDE6ED;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* --- Modo Escuro (TEMA ROSA) --- */
+.dark-mode {
+    --primary-color: #880E4F; /* Rosa Escuro/Baga (Fundo Principal) */
+    --secondary-color: #AD1457; /* Rosa Escuro Muted (Tags e Destaques Secundários) */
+    --accent-color: #FF4081; /* Rosa Vibrante (Destaque) */
+    --background-light: #2C3E50; /* Fundo escuro */
+    --text-dark: #ECF0F1; /* TEXTO CLARO */
+    --text-light: #2C3E50; /* Cor escura em elementos claros (se houver) */
+    --card-background: #34495E;
+    --border-color: #4A6572;
+    --shadow-light: rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    position: relative;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Botão de Tema */
+.theme-button {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9em;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.theme-button:hover {
+    background-color: #CC3366; /* Corrigido: Tom mais escuro do rosa para o hover */
+    transform: scale(1.05);
+}
+
+.dark-mode .theme-button {
+    background-color: var(--text-dark); 
+    color: var(--accent-color);
+}
+.dark-mode .theme-button:hover {
+    background-color: #202A35; /* Corrigido: Tom mais escuro do fundo escuro para o hover */
+}
+
+
+/* Main Content & Cards */
+main {
+    padding: 40px 0;
+}
+
+/* ... (Outras regras de .card e .card h2) ... */
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.8;
+    /* --- REGRA ADICIONADA/MODIFICADA AQUI --- */
+    text-align: justify; 
+    /* -------------------------------------- */
+}
+
+/* ... (Outras regras do projeto-grid) ... */
+
+.project-item p {
+    /* --- REGRA ADICIONADA/MODIFICADA AQUI --- */
+    text-align: justify;
+    /* -------------------------------------- */
+}
+
+.card {
+    background-color: var(--card-background);
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--shadow-light);
+    border-left: 5px solid var(--primary-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.8;
+}
+
+/* Fotos de Perfil (na seção "Sobre") */
+.profile-photo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Removido o anel de box-shadow e mantida apenas a borda de destaque: */
+    border: 5px solid var(--accent-color); 
+    box-shadow: 0 4px 15px var(--shadow-light); /* Sombra suave, sem o anel duplo */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo figcaption {
+    margin-top: 15px;
+    font-style: italic;
+    color: #666; /* Cor cinza padrão */
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+    /* Garante que a legenda não tenha nenhuma borda ou anel */
+    border: none;
+    box-shadow: none; 
+}
+/* No Dark Mode, garante que a legenda tenha a cor de texto correta */
+.dark-mode .profile-photo figcaption {
+    color: #CCC;
+}
+/* Grid de Projetos */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.project-item {
+    background-color: #F8F8F8;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 10px var(--shadow-light);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode .project-item {
+    background-color: #4A6572;
+    border-color: #607D8B;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-light);
+}
+
+.project-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-item ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.project-item ul li {
+    background-color: var(--secondary-color);
+    /* Correção de Contraste: Texto escuro no fundo claro das tags (Light Mode) */
+    color: var(--text-dark); 
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.dark-mode .project-item ul li {
+    background-color: var(--secondary-color); /* Rosa escuro/Muted */
+}
+
+.project-item figure {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.project-item figure img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+.project-item figcaption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    box-shadow: 0 -4px 8px var(--shadow-light);
+    font-size: 0.95em;
+}
+
+footer .social-links {
+    margin-top: 20px;
+}
+
+footer .social-links a {
+    color: var(--text-light);
+    font-size: 1.8em;
+    margin: 0 12px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer .social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* --- CORREÇÃO DO MODO ESCURO (Legibilidade Garantida) --- */
+
+/* 1. Regra FORTE para herdar a cor CLARA em TODO texto que não for link */
+.dark-mode,
+.dark-mode * {
+    color: var(--text-dark);
+}
+
+/* 2. Reverte a cor para títulos e links que devem ter cores de destaque */
+.dark-mode .card h2 {
+    color: var(--accent-color); /* Rosa Vibrante */
+}
+
+.dark-mode .project-item h3 {
+    color: var(--secondary-color); /* Rosa Escuro Muted */
+}
+
+/* Links em geral (para que se destaquem no fundo escuro) */
+.dark-mode a:not(.theme-button, nav a) {
+    color: #D81B60; /* Rosa/Magenta Brilhante para Links */
+}
+
+/* Links da navegação e títulos do cabeçalho */
+.dark-mode nav ul li a,
+.dark-mode header h1,
+.dark-mode header p {
+    color: var(--text-dark); /* Cor clara */
+}
+
+/* Itens da lista (Tags pílulas) - Texto claro em fundo escuro */
+.dark-mode .project-item ul li {
+    background-color: var(--secondary-color);
+    color: var(--text-dark) !important; /* Cor clara forçada para contraste */
+}
+
+/* --- Responsividade Básica --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    nav ul li a {
+        padding: 6px 12px;
+    }
+
+    .theme-button {
+        position: static;
+        margin-top: 20px;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .card h2 {
+        font-size: 1.8em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .profile-photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    header p {
+        font-size: 0.9em;
+    }
+    .card h2 {
+        font-size: 1.5em;
+    }
+    footer .social-links a {
+        font-size: 1.5em;
+    }
+}
+
+/* --- Estilo Específico para a Página de Contato --- */
+
+/* Estiliza a lista de informações de contato */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.contact-list li {
+    font-size: 1.1em;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-list li:last-child {
+    border-bottom: none;
+}
+
+.contact-list li i {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    width: 25px; /* Garante que os ícones fiquem alinhados */
+    text-align: center;
+}
+
+.contact-list li a {
+    color: var(--text-dark); /* Cor escura no modo claro */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list li a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Links de Redes Sociais no Card de Contato */
+.social-links-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links-contact a {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links-contact a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+/* Ajustes de Tema Escuro para Contato */
+.dark-mode .contact-list li i {
+    color: var(--accent-color);
+}
+
+.dark-mode .contact-list li a {
+    color: var(--text-dark); /* Cor clara no modo escuro */
+}
+.dark-mode .contact-list li a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Estilo para Destaque de Premiações (Top Student) --- */
+
+.highlight-award {
+    display: block; /* Ocupa a largura total para ter um bloco de fundo */
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: 1.1em;
+    
+    color: var(--text-light); /* Texto claro para fundo colorido */
+    background-color: var(--accent-color); /* Rosa vibrante */
+    
+    padding: 10px 15px;
+    margin-bottom: 15px; /* Espaço após o destaque */
+    border-radius: 8px;
+    
+    /* Sombra sutil para dar profundidade */
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4); 
+    text-align: center; /* Centraliza o texto no bloco */
+}
+
+/* Ajuste para o Modo Escuro */
+.dark-mode .highlight-award {
+    background-color: var(--accent-color); /* Mantém o rosa vibrante */
+    color: var(--text-dark) !important; /* Cor clara/branca forçada no modo escuro */
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.8); /* Sombra mais forte no escuro */
+}
